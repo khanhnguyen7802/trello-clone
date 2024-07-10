@@ -1,1 +1,1 @@
-/* comment to push git */
+/* detail of a board list (list of different boards) */
