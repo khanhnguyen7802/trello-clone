@@ -1,9 +1,9 @@
 // details of a single board 
 
 import AppBar from '~/components/AppBar'
-import BoardBar from '~/BoardBar';
+import BoardBar from './BoardBar';
 import Container from '@mui/material/Container'
-import BoardContent from '~/BoardContent';
+import BoardContent from './BoardContent';
 
 function Board() {
   return (
