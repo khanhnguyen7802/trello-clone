@@ -10,19 +10,19 @@ const theme = extendTheme({
     boardBarHeight: '60px'
   }, 
   colorSchemes: {
-    light: {
-      palette: {
-        primary: teal,
-        secondary: deepOrange,
-        }
-      },
+    // light: {
+    //   palette: {
+    //     primary: teal,
+    //     secondary: deepOrange,
+    //     }
+    //   },
       
-    dark: {
-      palette: {
-        primary: brown,
-        secondary: orange
-      }
-    }
+    // dark: {
+    //   palette: {
+    //     primary: brown,
+    //     secondary: orange
+    //   }
+    // }
   }, 
   components: {
     MuiCssBaseline: {
@@ -49,7 +49,11 @@ const theme = extendTheme({
         root: {
           // Some CSS
           textTransform: 'none',
-          fontWeight: 'bold'
+          fontWeight: 'bold',
+          borderWidth: '0.5px',
+          '&:hover': {
+            borderWidth: '1.5px'
+          }
         }
       }
     },
@@ -71,14 +75,14 @@ const theme = extendTheme({
           // Some CSS
           color: theme.palette.primary.main,
           fontSize: '0.875rem', 
-          '.MuiOutlinedInput-notchedOutline': {        // border line of search box
-            borderColor: theme.palette.primary.light 
-          },
-          '&:hover': {
-            '.MuiOutlinedInput-notchedOutline': {        // border line of search box
-            borderColor: theme.palette.primary.main
-            }
-          }, 
+          // '.MuiOutlinedInput-notchedOutline': {        // border line of search box
+          //   borderColor: theme.palette.primary.light 
+          // },
+          // '&:hover': {
+          //   '.MuiOutlinedInput-notchedOutline': {        // border line of search box
+          //   borderColor: '#9e7567'
+          //   }
+          // }, 
           // '& fieldset': {
           //   borderWidth: '2px' !important
           // }

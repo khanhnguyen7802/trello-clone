@@ -18,13 +18,32 @@ function ModeSelect() {
 
   return (
     <FormControl size="small" sx={{ minWidth: '120px'}}>
-      <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+      <InputLabel 
+        id="label-select-dark-light-mode"
+        sx={{
+          color: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848'),
+          '&.Mui-focused': {
+            color: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848')
+          }
+        }}>Mode</InputLabel>
       <Select
         labelId="label-select-dark-light-mode"
         id="select-dark-light-mode"
         value={mode}
         label="Age"
         onChange={handleChange}
+        sx={{
+          color: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848'),
+          '.MuiOutlinedInput-notchedOutline': {        // border line of search box
+            borderColor: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848')
+          }, 
+          '&:hover .MuiOutlinedInput-notchedOutline': {        // border line of search box
+            borderColor: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848')
+          },
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': {        // border line of search box
+            borderColor: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848')
+          }
+        }}
       >
 
         <MenuItem value="light">
