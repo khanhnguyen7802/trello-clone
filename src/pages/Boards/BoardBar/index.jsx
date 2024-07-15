@@ -39,7 +39,8 @@ function BoardBar() {
       gap: 2,
       overflowX: 'auto',
       borderBottom: '1px solid #00bfa5',
-      backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#73605B' : '#89ABE3') 
+      backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#73605B' : '#89ABE3'), 
+      '&::-webkit-scrollbar-track': { m :2 }
     }}>
       Board bar
 
@@ -84,7 +85,7 @@ function BoardBar() {
             borderColor: (theme) => (theme.palette.mode === 'dark' ? '#9e7567' : '#00008B'),
             '&:hover': {
               borderColor: (theme) => (theme.palette.mode === 'dark' ? '#9e7567' : '#00008B'), 
-              backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '##826c67' : '#9cbef7'), 
+              backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#826c67' : '#9cbef7'), 
             }
           }}>Invite</Button>
 
@@ -94,7 +95,8 @@ function BoardBar() {
           '& .MuiAvatar-root': {
             width: 34, 
             height: 34,
-            fontSize: '16px'
+            fontSize: '16px',
+            cursor: 'pointer'
           }
         }}
         >

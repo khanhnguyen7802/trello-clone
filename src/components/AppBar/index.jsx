@@ -33,7 +33,8 @@ function AppBar() {
       justifyContent: 'space-between', 
       gap: 2,
       overflowX: 'auto',
-      backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#2A3132' : '#A1D6E2')
+      backgroundColor: (theme) => (theme.palette.mode === 'dark' ? '#2A3132' : '#A1D6E2'),
+      '&::-webkit-scrollbar-track': { m :2 }
   }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2}}>
         <AppsIcon sx={{ 
@@ -62,6 +63,7 @@ function AppBar() {
         <Recent />
         <Starred />
         <Templates />
+        
 
         <Button 
           sx={{ 
@@ -105,7 +107,7 @@ function AppBar() {
             )
           }} 
           sx={{ 
-            minWidth: '120px', 
+            minWidth: '100px', 
             maxWidth: '180px', 
             '& label': { color: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848') },
             '& label.Mui-focused': { color: (theme) => (theme.palette.mode === 'dark' ? '#A1D6E2' : '#4d4848') },
