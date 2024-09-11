@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import karina1 from '~/assets/karina1.jpg'
 import winter1 from '~/assets/winter1.jpg'
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import { capitalizeFirstLetter } from '~/utils/formatters';
 
 const MENU_STYLE = {
     color: (theme) => (theme.palette.mode === 'dark' ? '#73605B' : '#00008B'), 
@@ -27,7 +28,7 @@ const MENU_STYLE = {
 }
 
 
-function BoardBar() {
+function BoardBar({ board }) { 
   return (
     <Box px={2} sx={{
       // backgroundColor: 'white',
@@ -47,12 +48,12 @@ function BoardBar() {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2}}>
         <Chip sx={MENU_STYLE}
         icon={<DashboardIcon />} 
-        label="Khanh Nguyen dashboard" 
+        label={board?.title} 
         onClick={() => {}}/>
 
         <Chip sx={MENU_STYLE}
         icon={<VpnLockIcon />} 
-        label="Public/Private workspace" 
+        label={capitalizeFirstLetter(board?.type)} 
         onClick={() => {}}/>
         
         

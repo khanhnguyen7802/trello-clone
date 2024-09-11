@@ -1,18 +1,19 @@
 // details of a single board 
 
-import AppBar from '~/components/AppBar'
-import BoardBar from './BoardBar';
+import AppBar from '~/components/AppBar/AppBar'
+import BoardBar from './BoardBar/BoardBar';
 import Container from '@mui/material/Container'
-import BoardContent from './BoardContent';
+import BoardContent from './BoardContent/BoardContent';
+import { mockData } from '~/apis/mock-data.js'
 
 function Board() {
   return (
     <Container disableGutters maxWidth={false} sx={{ height:'100vh'}}>
       <AppBar />
 
-      <BoardBar />
+      <BoardBar board={mockData?.board} /> 
      
-      <BoardContent />
+      <BoardContent board={mockData?.board} />
 
     </Container>
   )
